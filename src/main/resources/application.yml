@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    username: sa
+    url: jdbc:h2:mem:testdb
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        format_sql: 'true'
+  h2:
+    console:
+      enabled: 'true'
+app:
+#  security:
+    jwt:
+      jwt-issuer: payeshgaranDadeh.ir
+      token_prefix: Bearer
+      jwt-secret: secretsecretsecret654564sdvs;n;flknw;ljfsnvln;ln@@@@ljfoiejorfwuef????/////lfhskhflssecretsecretsecretsecretsecret
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+        SQL: DEBUG
